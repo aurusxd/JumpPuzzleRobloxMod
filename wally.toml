@@ -5,12 +5,15 @@ registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+React = "jsdotlua/react@17.2.1"
+ReactRoblox = "jsdotlua/react-roblox@17.2.1"
+Signal = "stravant/goodsignal@0.3.1"
+Promise = "evaera/promise@4.0.0"
+Trove = "sleitnick/trove@1.8.0"
 
 [server-dependencies]
 ProfileStore = "lm-loleris/profilestore@1.0.3"
 
 [dev-dependencies]
-Jest = "jsdotlua/jest@3.6.1"
-JestGlobals = "jsdotlua/jest-globals@3.6.1"
-ReactRoblox = "jsdotlua/react-roblox@17.2.0"
-React = "jsdotlua/react@17.2.0"
+Jest = "jsdotlua/jest@3.10.0"
+JestGlobals = "jsdotlua/jest-globals@3.10.0"
