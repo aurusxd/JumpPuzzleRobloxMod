@@ -12,3 +12,5 @@ All assets used in Jumpbound must be tracked here with their origin and license.
 - Roblox catalog assets: only those with permissive licensing.
 - AI-generated assets: no IP references in prompts.
 - Every new asset added to the project must have a row in this table before merge.
+
+<!-- CI gate verification -->
