@@ -9,21 +9,22 @@ local StageDefs: { [string]: {
 	isMilestone: boolean,
 	rewardTableId: string?,
 	checkpointTag: string,
-} } = {
-	s01 = {
-		id = "s01",
-		index = 1,
-		isMilestone = false,
-		rewardTableId = nil,
-		checkpointTag = "Checkpoint_s01",
-	},
-	s02 = {
-		id = "s02",
-		index = 2,
-		isMilestone = false,
-		rewardTableId = nil,
-		checkpointTag = "Checkpoint_s02",
-	},
-}
+} } =
+	{
+		s01 = {
+			id = "s01",
+			index = 1,
+			isMilestone = false,
+			rewardTableId = nil,
+			checkpointTag = "Checkpoint_s01",
+		},
+		s02 = {
+			id = "s02",
+			index = 2,
+			isMilestone = false,
+			rewardTableId = nil,
+			checkpointTag = "Checkpoint_s02",
+		},
+	}
 
 return StageDefs

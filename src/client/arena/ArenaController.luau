@@ -5,7 +5,6 @@
 
 local ArenaController = {}
 
-function ArenaController:Start()
-end
+function ArenaController:Start() end
 
 return ArenaController

@@ -7,15 +7,16 @@ local RewardTables: { [string]: {
 	id: string,
 	entries: { { defId: string, weight: number } },
 	guaranteedRarityAtLeast: string?,
-} } = {
-	milestone_basic = {
-		id = "milestone_basic",
-		entries = {
-			{ defId = "ember_blob", weight = 60 },
-			{ defId = "tide_jelly", weight = 40 },
+} } =
+	{
+		milestone_basic = {
+			id = "milestone_basic",
+			entries = {
+				{ defId = "ember_blob", weight = 60 },
+				{ defId = "tide_jelly", weight = 40 },
+			},
+			guaranteedRarityAtLeast = nil,
 		},
-		guaranteedRarityAtLeast = nil,
-	},
-}
+	}
 
 return RewardTables

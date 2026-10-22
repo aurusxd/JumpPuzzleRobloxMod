@@ -5,10 +5,8 @@
 
 local RewardService = {}
 
-function RewardService:Init(locator: any)
-end
+function RewardService:Init(locator: any) end
 
-function RewardService:Start()
-end
+function RewardService:Start() end
 
 return RewardService

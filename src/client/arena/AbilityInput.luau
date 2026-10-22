@@ -5,7 +5,6 @@
 
 local AbilityInput = {}
 
-function AbilityInput:Start()
-end
+function AbilityInput:Start() end
 
 return AbilityInput

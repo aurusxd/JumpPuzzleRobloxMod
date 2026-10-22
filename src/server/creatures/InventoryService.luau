@@ -5,10 +5,8 @@
 
 local InventoryService = {}
 
-function InventoryService:Init(locator: any)
-end
+function InventoryService:Init(locator: any) end
 
-function InventoryService:Start()
-end
+function InventoryService:Start() end
 
 return InventoryService

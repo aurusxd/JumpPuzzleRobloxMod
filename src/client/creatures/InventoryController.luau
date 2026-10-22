@@ -5,7 +5,6 @@
 
 local InventoryController = {}
 
-function InventoryController:Start()
-end
+function InventoryController:Start() end
 
 return InventoryController

@@ -5,10 +5,8 @@
 
 local ArenaService = {}
 
-function ArenaService:Init(locator: any)
-end
+function ArenaService:Init(locator: any) end
 
-function ArenaService:Start()
-end
+function ArenaService:Start() end
 
 return ArenaService

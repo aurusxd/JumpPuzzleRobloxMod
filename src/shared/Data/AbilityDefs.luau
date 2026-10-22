@@ -9,18 +9,19 @@ local AbilityDefs: { [string]: {
 	cooldown: number,
 	damage: number,
 	params: { [string]: number },
-} } = {
-	fireball = {
-		id = "fireball",
-		kind = "Projectile",
-		cooldown = 3,
-		damage = 25,
-		params = {
-			speed = 60,
-			radius = 2,
-			range = 80,
+} } =
+	{
+		fireball = {
+			id = "fireball",
+			kind = "Projectile",
+			cooldown = 3,
+			damage = 25,
+			params = {
+				speed = 60,
+				radius = 2,
+				range = 80,
+			},
 		},
-	},
-}
+	}
 
 return AbilityDefs

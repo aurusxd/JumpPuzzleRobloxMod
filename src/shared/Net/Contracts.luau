@@ -3,8 +3,6 @@
 -- All remote event/function declarations (tech.md §10)
 -- Every remote has: name, direction, rate limit
 
-local Contracts = {}
-
 export type ContractDirection = "ClientToServer" | "ServerToClient"
 
 export type RemoteContract = {
@@ -13,53 +11,55 @@ export type RemoteContract = {
 	rateLimit: number?, -- requests per second (nil = no limit, server->client only)
 }
 
+local Contracts: { [string]: RemoteContract } = {}
+
 -- Client -> Server remotes
-Contracts.RequestEquipCreature: RemoteContract = {
+Contracts.RequestEquipCreature = {
 	name = "RequestEquipCreature",
 	direction = "ClientToServer",
 	rateLimit = 2,
 }
 
-Contracts.RequestJoinArena: RemoteContract = {
+Contracts.RequestJoinArena = {
 	name = "RequestJoinArena",
 	direction = "ClientToServer",
 	rateLimit = 1,
 }
 
-Contracts.RequestLeaveArena: RemoteContract = {
+Contracts.RequestLeaveArena = {
 	name = "RequestLeaveArena",
 	direction = "ClientToServer",
 	rateLimit = 1,
 }
 
-Contracts.ArenaUseAbility: RemoteContract = {
+Contracts.ArenaUseAbility = {
 	name = "ArenaUseAbility",
 	direction = "ClientToServer",
 	rateLimit = 10,
 }
 
 -- Server -> Client remotes
-Contracts.ProgressChanged: RemoteContract = {
+Contracts.ProgressChanged = {
 	name = "ProgressChanged",
 	direction = "ServerToClient",
 }
 
-Contracts.CreatureGranted: RemoteContract = {
+Contracts.CreatureGranted = {
 	name = "CreatureGranted",
 	direction = "ServerToClient",
 }
 
-Contracts.InventorySnapshot: RemoteContract = {
+Contracts.InventorySnapshot = {
 	name = "InventorySnapshot",
 	direction = "ServerToClient",
 }
 
-Contracts.ArenaStateChanged: RemoteContract = {
+Contracts.ArenaStateChanged = {
 	name = "ArenaStateChanged",
 	direction = "ServerToClient",
 }
 
-Contracts.ArenaHitConfirmed: RemoteContract = {
+Contracts.ArenaHitConfirmed = {
 	name = "ArenaHitConfirmed",
 	direction = "ServerToClient",
 }

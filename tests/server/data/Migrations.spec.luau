@@ -9,7 +9,13 @@ return function()
 		it("should not modify a profile at the latest version", function()
 			local profile = {
 				version = 1,
-				obby = { highestStage = 5, checkpoint = "s05", completedStages = {}, claimedRewards = {}, jumpUpgradeLevel = 2 },
+				obby = {
+					highestStage = 5,
+					checkpoint = "s05",
+					completedStages = {},
+					claimedRewards = {},
+					jumpUpgradeLevel = 2,
+				},
 				creatures = { owned = {}, equipped = nil },
 				stats = { arenaWins = 3, arenaKills = 10, arenaDeaths = 7 },
 			}
