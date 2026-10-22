@@ -7,7 +7,7 @@ realm = "shared"
 [dependencies]
 
 [server-dependencies]
-ProfileStore = "loleris/profilestore@2.0.3"
+ProfileStore = "lm-loleris/profilestore@1.0.3"
 
 [dev-dependencies]
 Jest = "jsdotlua/jest@3.6.1"
