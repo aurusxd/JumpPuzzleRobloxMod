@@ -17,9 +17,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Rokit tools
-        run: rokit install --no-hooks
-
       - name: Install Wally packages
         run: wally install
 
