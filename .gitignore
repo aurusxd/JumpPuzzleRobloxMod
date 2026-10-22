@@ -1,0 +1,27 @@
+# Dependencies
+Packages/
+DevPackages/
+node_modules/
+
+# Roblox build output
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+
+# Rojo sourcemap (generated)
+sourcemap.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rokit
+.rokit/
+
+# IDE
+.vscode/
+.idea/
+
+# Wally lockfile is committed for reproducibility
+# wally.lock
