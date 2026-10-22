@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to test place
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Wally packages
+        run: wally install
+
+      - name: Generate sourcemap
+        run: rojo sourcemap default.project.json -o sourcemap.json
+
+      - name: Rojo build
+        run: rojo build default.project.json -o Jumpbound.rbxl
+
+      - name: Deploy via Open Cloud
+        env:
+          ROBLOSECURITY: ${{ secrets.ROBLOSECURITY }}
+          ROBLOX_API_KEY: ${{ secrets.ROBLOX_API_KEY }}
+          UNIVERSE_ID: ${{ secrets.UNIVERSE_ID }}
+          PLACE_ID: ${{ secrets.PLACE_ID }}
+        run: |
+          rbxcloud experience publish \
+            --filename Jumpbound.rbxl \
+            --universe-id "$UNIVERSE_ID" \
+            --place-id "$PLACE_ID" \
+            --api-key "$ROBLOX_API_KEY" \
+            --version-type saved

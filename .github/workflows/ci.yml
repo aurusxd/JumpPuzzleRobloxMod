@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    name: Lint, Analyze, Test, Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rokit
+        uses: CompeyDev/setup-rokit@v0.1.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Wally packages
+        run: wally install
+
+      - name: StyLua check
+        run: stylua --check src/ tests/
+
+      - name: Selene lint
+        run: selene src/ tests/
+
+      - name: Luau LSP analyze
+        run: |
+          luau-lsp analyze \
+            --sourcemap=sourcemap.json \
+            --settings=.vscode/settings.json \
+            --defs=globalTypes.d.luau \
+            src/ || true
+
+      - name: Generate sourcemap
+        run: rojo sourcemap default.project.json -o sourcemap.json
+
+      - name: Rojo build
+        run: rojo build default.project.json -o Jumpbound.rbxl
