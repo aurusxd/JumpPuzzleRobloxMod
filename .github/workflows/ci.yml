@@ -17,8 +17,14 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Install Rokit tools
+        run: rokit install --no-hooks
+
       - name: Install Wally packages
         run: wally install
+
+      - name: Generate sourcemap
+        run: rojo sourcemap default.project.json -o sourcemap.json
 
       - name: StyLua check
         run: stylua --check src/ tests/
@@ -30,12 +36,7 @@ jobs:
         run: |
           luau-lsp analyze \
             --sourcemap=sourcemap.json \
-            --settings=.vscode/settings.json \
-            --defs=globalTypes.d.luau \
             src/ || true
-
-      - name: Generate sourcemap
-        run: rojo sourcemap default.project.json -o sourcemap.json
 
       - name: Rojo build
         run: rojo build default.project.json -o Jumpbound.rbxl
