@@ -1,0 +1,23 @@
+[describe]
+any = true
+
+[it]
+any = true
+
+[expect]
+any = true
+
+[beforeEach]
+any = true
+
+[afterEach]
+any = true
+
+[beforeAll]
+any = true
+
+[afterAll]
+any = true
+
+[jest]
+any = true

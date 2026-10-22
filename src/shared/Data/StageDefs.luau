@@ -3,13 +3,15 @@
 -- Stage definitions (tech.md §6)
 -- Stub data: 2 stages for skeleton (LEAD.md §1 p.10)
 
-local StageDefs: { [string]: {
-	id: string,
-	index: number,
-	isMilestone: boolean,
-	rewardTableId: string?,
-	checkpointTag: string,
-} } =
+local StageDefs: {
+	[string]: {
+		id: string,
+		index: number,
+		isMilestone: boolean,
+		rewardTableId: string?,
+		checkpointTag: string,
+	},
+} =
 	{
 		s01 = {
 			id = "s01",

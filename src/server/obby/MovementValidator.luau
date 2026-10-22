@@ -5,7 +5,7 @@
 
 local MovementValidator = {}
 
-function MovementValidator:Init(locator: any) end
+function MovementValidator:Init(_locator: any) end
 
 function MovementValidator:Start() end
 

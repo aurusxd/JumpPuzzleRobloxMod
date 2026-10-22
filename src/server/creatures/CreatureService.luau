@@ -5,7 +5,7 @@
 
 local CreatureService = {}
 
-function CreatureService:Init(locator: any) end
+function CreatureService:Init(_locator: any) end
 
 function CreatureService:Start() end
 

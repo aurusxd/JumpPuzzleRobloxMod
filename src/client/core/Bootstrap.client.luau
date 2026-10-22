@@ -4,7 +4,6 @@
 -- S0-8: initializes net, starts controllers, mounts HUD
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
 
 local Net = require(ReplicatedStorage.Shared.Net.Net)
 local CheckpointController = require(script.Parent.Parent.obby.CheckpointController)

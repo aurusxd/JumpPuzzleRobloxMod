@@ -1,4 +1,4 @@
-std = "roblox"
+std = "roblox+jest"
 
 [lints]
 empty_if = "warn"
@@ -11,3 +11,4 @@ shadowing = "allow"
 unbalanced_assignments = "warn"
 undefined_variable = "deny"
 unused_variable = "warn"
+roblox_manual_fromscale_or_fromoffset = "allow"

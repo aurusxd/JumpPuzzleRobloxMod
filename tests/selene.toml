@@ -1,5 +1,0 @@
-std = "roblox"
-
-[lints]
-undefined_variable = { allow = ["describe", "it", "expect", "beforeEach", "afterEach", "beforeAll", "afterAll", "jest"] }
-unused_variable = "allow"

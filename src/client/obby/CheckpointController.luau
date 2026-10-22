@@ -3,7 +3,6 @@
 -- Client-side: listens for ProgressChanged and updates UI (S0-8 reference vertical)
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
 
 local Net = require(ReplicatedStorage.Shared.Net.Net)
 

@@ -21,11 +21,7 @@ type ProfileStoreInterface = {
 
 local profiles: { [Player]: ProfileHandle } = {}
 local profileStore: ProfileStoreInterface? = nil
-local serviceLocator: any = nil
-
-function DataService:Init(locator: any)
-	serviceLocator = locator
-end
+function DataService:Init(_locator: any) end
 
 -- Inject a mock profile store for testing
 function DataService:setProfileStore(store: ProfileStoreInterface)

@@ -29,7 +29,7 @@ end
 
 -- Init all services (dependency injection phase)
 function ServiceLocator.initAll()
-	for name, entry in services do
+	for _, entry in services do
 		if not entry.initialized and entry.service.Init then
 			entry.service:Init(ServiceLocator)
 			entry.initialized = true
@@ -39,7 +39,7 @@ end
 
 -- Start all services (runtime phase, after all Init complete)
 function ServiceLocator.startAll()
-	for name, entry in services do
+	for _, entry in services do
 		if not entry.started and entry.service.Start then
 			entry.service:Start()
 			entry.started = true

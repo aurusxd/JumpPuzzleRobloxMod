@@ -11,13 +11,11 @@ local Constants = require(game:GetService("ReplicatedStorage").Shared.Config.Con
 local CheckpointService = {}
 
 local progressService: any = nil
-local dataService: any = nil
 
 -- Max distance a player can be from a checkpoint to register a touch
 local MAX_TOUCH_DISTANCE = 15
 
 function CheckpointService:Init(locator: any)
-	dataService = locator.get("DataService")
 	progressService = locator.get("ProgressService")
 end
 
