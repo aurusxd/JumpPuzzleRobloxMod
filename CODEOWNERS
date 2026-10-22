@@ -1,29 +1,29 @@
 # CODEOWNERS — Jumpbound
 # Ownership per tech.md section 11
 
-# Core infrastructure — lead only
-/tech.md                        @nikita
-/src/shared/Types/              @nikita
-/src/shared/Net/                @nikita
-/src/shared/Config/             @nikita
-/src/shared/Util/               @nikita
-/src/server/data/               @nikita
-/src/server/core/               @nikita
-/src/client/core/               @nikita
-/src/client/ui/primitives/      @nikita
-/default.project.json           @nikita
+# Core infrastructure — lead only (Nikita / @aurusxd)
+/tech.md                        @aurusxd
+/src/shared/Types/              @aurusxd
+/src/shared/Net/                @aurusxd
+/src/shared/Config/             @aurusxd
+/src/shared/Util/               @aurusxd
+/src/server/data/               @aurusxd
+/src/server/core/               @aurusxd
+/src/client/core/               @aurusxd
+/src/client/ui/primitives/      @aurusxd
+/default.project.json           @aurusxd
 
 # Obby — lead as developer
-/src/server/obby/               @nikita
-/src/client/obby/               @nikita
-/src/shared/Data/StageDefs.luau @nikita
+/src/server/obby/               @aurusxd
+/src/client/obby/               @aurusxd
+/src/shared/Data/StageDefs.luau @aurusxd
 
-# Creatures, arena, their UI — Alexey
-/src/server/creatures/          @alexey
-/src/server/arena/              @alexey
-/src/client/creatures/          @alexey
-/src/client/arena/              @alexey
-/src/client/ui/screens/         @alexey
-/src/shared/Data/CreatureDefs.luau  @alexey
-/src/shared/Data/AbilityDefs.luau   @alexey
-/src/shared/Data/RewardTables.luau  @alexey
+# Creatures, arena, their UI — Alexey (@InfinityFalling)
+/src/server/creatures/          @InfinityFalling
+/src/server/arena/              @InfinityFalling
+/src/client/creatures/          @InfinityFalling
+/src/client/arena/              @InfinityFalling
+/src/client/ui/screens/         @InfinityFalling
+/src/shared/Data/CreatureDefs.luau  @InfinityFalling
+/src/shared/Data/AbilityDefs.luau   @InfinityFalling
+/src/shared/Data/RewardTables.luau  @InfinityFalling
